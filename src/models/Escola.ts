@@ -81,5 +81,7 @@ export class Escola {
 
     this.alunos.push(aluno);
     turma.adicionarAluno(aluno);
+    console.log("Aluno adicionado")
+    this.listagemAlunos()
   }
 }
