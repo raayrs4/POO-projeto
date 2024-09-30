@@ -7,6 +7,7 @@ export class Aluno {
   nascimento: Date;
   notas: number[] = [];
   ativo: boolean = true;
+  classificacao:  "A" | "B" | "C" | "D";
   static readonly MEDIA_ESCOLA = 6; // Média padrão da escola
 
   constructor(
@@ -18,6 +19,7 @@ export class Aluno {
     nascimento: Date,
     notas: number[] = [],
     ativo: boolean = true,
+    classificacao: "A" | "B" | "C" | "D",
   ) {
     this.nome = nome;
     this.sobrenome = sobrenome;
@@ -27,6 +29,7 @@ export class Aluno {
     this.nascimento = nascimento; 
     this.notas = notas.slice(0, 5);
     this.ativo = ativo;
+    this.classificacao = classificacao;
   
     if (!this.validarIdade()) {
       throw new Error("Aluno deve ter pelo menos 16 anos.");
